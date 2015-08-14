@@ -1,0 +1,93 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+}
+.restaurant-name{
+    font-size: 1.3em;
+    text-align: center;
+}
+.time-period{
+    font-size: 0.8em;
+    color: #f04e2f;
+    text-align: center;
+    margin: 0;
+    line-height: 1em;
+    margin-bottom: 20px;
+    font-family: 'Roboto-Light';
+}
+.type{
+    font-size: 1em;
+    text-align: center;
+    color: #999;
+    line-height: 1.5em;
+    padding: 0;
+    margin: 3px 0;
+}
+.section{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.section0{
+    margin-bottom: 20px;
+}
+.section1{
+    margin-bottom: 30px;
+}
+.giftcard-table{
+    width: 100%;
+    margin-bottom: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+.subject{
+    font-size: 0.8em;
+    text-align: center;
+    background-color: #eaeaea;
+    line-height: 1.5em;
+    padding: 15px 10px;
+    color: #222;
+}
+td.tar-name{
+    width: 60%;
+    text-align: left;
+    padding: 10px 0 10px 20px;
+    color: #333;
+    font-family: 'Roboto-Light';
+}
+td.tar-value{
+    width: 40%;
+    text-align: right;
+    padding: 10px 20px 10px 0;
+    color: #f04e2f;
+    font-family: 'Roboto-Light';
+}
+tr.item-row{
+    border-top: 1px solid #eee;
+    background-color: #fff;
+}
+.detail-table tr.item-row:first-child{
+    border-top: 1px solid #ccc;
+}
+td.item-name{
+    width: 52%;
+    text-align: left;
+    padding: 10px 0 10px 20px;
+    color: #999;
+    font-family: 'Roboto-Light';
+}
+td.item-value{
+    width: 48%;
+    text-align: right;
+    padding: 10px 20px 10px 0;
+    color: #333;
+    font-family: 'Roboto-Light';
+}
+td.giftcard-name{
+    font-size: 0.8em;
+}
+.customer-phone{
+    font-size: 0.8em;
+    color: #4A90E2;
+}
