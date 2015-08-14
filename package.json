@@ -21,6 +21,7 @@
     "moment": "^2.10.6",
     "react": "^0.13.3",
     "react-hot-loader": "^1.2.7",
+    "underscore": "^1.8.3",
     "webpack": "^1.10.0"
   },
   "devDependencies": {

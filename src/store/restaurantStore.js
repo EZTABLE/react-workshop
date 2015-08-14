@@ -8,6 +8,10 @@ class RestaurantStore {
 
         Object.assign(this, {summary: []});
     }
+
+    showAllProductsSuccess({summary, transactions, total_income}){
+        this.setState({summary, transactions, total_income});
+    }
 }
 
 export default makeHot(alt, RestaurantStore, "RestaurantStore");
