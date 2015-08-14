@@ -1,6 +1,7 @@
 import React from "react";
 import restaurantStore from "../store/restaurantStore";
 import restaurantAction from "../action/restaurantAction";
+import _ from "underscore"
 
 export default class History extends React.Component{
     constructor(props, ...args){
@@ -13,9 +14,28 @@ export default class History extends React.Component{
                 receivable: 122
             }]
         };
+        this.onChange = this.onChange.bind(this);
+    }
+
+    getState(){
+        let {summary, total_income} =  restaurantStore.getState();
+        summary = _.map(summary, (s, key) => {
+            return {
+                name: s[0].name,
+                quantity: s[0].total_item,
+                consumption:s[0].total_income,
+                receivable: 0
+            };
+        });
+        return {summary, total_income};
+    }
+
+    onChange(){
+        this.setState(this.getState());
     }
 
     componentDidMount(){
+        restaurantStore.listen(this.onChange);
         restaurantAction.showAllProducts(this.props);
     }
 
@@ -51,12 +71,12 @@ export default class History extends React.Component{
 
 class Table extends React.Component{
     render(){
-        let {quantity, consumption, receivable} = this.props;
+        let {quantity, consumption, receivable, name} = this.props;
 
         return (<table className="giftcard-table">
             <thead>
                 <tr>
-                    <th className="subject" colSpan={2}>台北【隨意鳥地方高空景觀餐廳】觀景浪漫宵夜雙人套餐 </th>
+                    <th className="subject" colSpan={2}>{name}</th>
                 </tr>
             </thead>
             <tbody>
