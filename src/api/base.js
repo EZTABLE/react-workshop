@@ -1,4 +1,6 @@
 import "isomorphic-fetch";
+import _ from "underscore";
+import qs from "querystring";
 
 let isoFetch = global.fetch,
     api, getApi;
@@ -10,8 +12,8 @@ getApi = () => {
 
     return api = {
         build: (path, query = {}) => {
-            _query = _.extend({}, query, {
-                access_token: ""
+            let _query = _.extend({}, query, {
+                access_token: "U44fmLv95QGCLID3PTGVJ23xhoBeOl6FdHfknfyC"
             });
 
             var url = `https://api.eztable.com/${path}?${qs.stringify(_query)}`;

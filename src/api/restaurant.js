@@ -1,4 +1,5 @@
 import api from "./base";
+import moment from "moment";
 
 export default {
     getRestaurantConfig({restaurantId}){
